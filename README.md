@@ -169,3 +169,16 @@ kubectl get all -n <name-space>
 
 source : https://github.com/manjularajamani/kanban-board.git
 
+
+
+Docker Compose commands
+When you’ll be playing around with Docker Compose you might want to use also different CLI commands that it offers. The full list can be found on the official website, but found these the most useful during development of my app:
+
+$ docker-compose up -d --force-recreate
+The -d flag runs all the containers in the detach mode — all containers run in the background, so you can use a terminal for other purposes.
+
+The--force-recreate flag will stop all old containers that are running and will create them from scratch. It was very useful when I’ve done some changes to several application at once.
+
+$ docker-compose down --rmi all
+Above command stops and removes all images.
+
